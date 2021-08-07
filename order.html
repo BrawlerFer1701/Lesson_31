@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-size: 30px;
+			color: white; 
+		}
+		.main{
+			width: 100%;
+			background: #C39292;
+			display: flex;	
+			flex-wrap: wrap;
+			flex-direction: row;		
+		}
+		header{
+			width: 100%;
+			background: #000;
+		}
+		.content{
+			width: 100%;
+			background: #804D4D;
+			display: flex;
+		}
+		.left{
+			width: 25%;;
+			min-height: 300px;
+			text-align: center;
+			background: #35AEF3;
+			flex-shrink: 0;
+		}
+		.right{
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			min-height: 800px;
+			background: #F31A1A;
+		}
+		.right_1, .right_2{
+			width: 100%;
+			min-height: 200px;
+			background: #B5A135;
+			flex: 1;
+			border: 1px solid #B6B4B4;
+		}
+		.left_hide{
+			width: 100%;
+			min-height: 200px;
+			background: #35AEF3;
+			flex: 1;
+			display: none;
+		}
+		@media (max-width: 375px){
+			.content{
+				flex-direction: column;
+			}
+			.left{
+				display: none;
+			}
+			.left_hide{
+				display: block;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>	
+	<div class="main">
+		<header>Header</header>	
+		<!-- <div class="content"> -->
+		<div class="left">Left</div>
+		<div class="right">
+			<div class="right_1">Right 1</div>
+			<div class="left_hide">Left</div>
+			<div class="right_2">Right 2</div>
+		</div>
+<!-- 		</div> -->
+		
+	</div>
+</body>
+</html>
